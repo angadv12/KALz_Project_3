@@ -51,3 +51,27 @@ In your terminal:
 ### ADD MORE
 
 ## 4. References
+References: \
+[1]		C. Vaccari and A. Chadwick, "Deepfakes and disinformation: Exploring the impact of synthetic \
+		political video on deception, uncertainty, and trust in news," Social Media + Society, vol. 6, no. \
+		pp. 1-13, 2020, doi: 10.1177/2056305120903408. \
+[2] 	G. Kourounis, A. Elmahmudi, B. Thomson, J. Hunter, H. Ugail, and C. Wilson, "Computer image \
+		analysis with artificial intelligence: a practical introduction to convolutional neural networks \
+		for medical professionals," Postgraduate Medical Journal, Oct. 2023, doi: \
+		https://doi.org/10.1093/postmj/qgad095. \
+[3] 	J. J. Bird and A. Lotfi, "CIFAKE: Image classification and explainable identification of \
+		AI-generated synthetic images," IEEE Access, vol. 12, pp. 15642-15650, 2024, doi: \
+		10.1109/ACCESS.2024.3356122. \
+[4] 	A. Krizhevsky and G. Hinton, "Learning multiple layers of features from tiny images," University \
+		of Toronto, Toronto, ON, Canada, Tech. Rep., 2009. \
+[5] 	R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, "High-resolution image synthesis \
+		with latent diffusion models," in Proc. IEEE/CVF Conf. Comput. Vision and Pattern Recognition \
+		(CVPR), New Orleans, LA, USA, 2022, pp. 10674-10685. \
+[6] 	K. He, X. Zhang, S. Ren, and J. Sun, "Deep residual learning for image recognition," in Proc. \
+		IEEE Conf. Comput. Vision and Pattern Recognition (CVPR), Las Vegas, NV, USA, 2016, pp. 770-778. \
+[7] 	G. Huang, Z. Liu, L. Van Der Maaten, and K. Q. Weinberger, "Densely connected convolutional \
+		networks," in Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR), Honolulu, HI, \
+		USA, 2017, pp. 2261-2269. \
+[8] 	R. R. Selvaraju, M. Cogswell, A. Das, R. Vedantam, D. Parikh, and D. Batra, "Grad-CAM: Visual \
+		explanations from deep networks via gradient-based localization," in Proc. IEEE Int. Conf. \
+		Comput. Vision (ICCV), Venice, Italy, 2017, pp. 618-626.
