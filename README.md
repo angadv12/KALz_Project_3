@@ -45,7 +45,7 @@ In your terminal:
 
 ### Run the EDA using Python
 In your terminal:
-- `python scripts/MI3_EDA.py`
+- `python scripts/MI2_EDA.py`
 - This generates [SPECIFY WHICH FIGURES] in `output/`.
 
 ### ADD MORE
