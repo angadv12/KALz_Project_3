@@ -98,17 +98,7 @@ output/models/densenet121_best.pt
 
 If GitHub or the submission system rejects large files, keep the `.pt` checkpoint files in Google Drive and include the metrics/plots/reports in `output/` locally.
 
-## 4. CS3 Case Study Package
-
-The `case_study/` folder contains the CS3 package for turning this project into a student-facing case study:
-
-- `Angad_CS3.docx`: editable Word version of the hook, student rubric, materials list, references, and print checklist.
-- `Angad_CS3.pdf`: rendered print/check version of the same packet.
-- `hook.md`: one-page hook document source.
-- `student_rubric.md`: student-facing rubric source.
-- `materials_and_references.md`: repo materials, source list, and hard-copy checklist.
-
-## 5. How to Reproduce the Results
+## 4. How to Reproduce the Results
 
 ### Local Setup for EDA
 
@@ -219,7 +209,7 @@ The main outputs are saved to:
 /content/drive/MyDrive/proj3/output/gradcam/densenet121_gradcam_examples.png
 ```
 
-## 6. Final Model Results
+## 5. Final Model Results
 
 Both models exceeded the project goal of 80% test accuracy and surpassed the 92.98% baseline reported by Bird and Lotfi.
 
@@ -230,7 +220,7 @@ Both models exceeded the project goal of 80% test accuracy and surpassed the 92.
 
 DenseNet-121 was the best model by test accuracy, but only by 0.05 percentage points, so both pretrained CNN architectures performed similarly well on CIFAKE.
 
-## 7. References
+## 6. References
 
 [1] C. Vaccari and A. Chadwick, "Deepfakes and disinformation: Exploring the impact of synthetic political video on deception, uncertainty, and trust in news," Social Media + Society, vol. 6, no. pp. 1-13, 2020, doi: 10.1177/2056305120903408.
 
