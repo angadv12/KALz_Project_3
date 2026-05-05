@@ -43,13 +43,6 @@
 │   ├── 01_EDA.py
 │   ├── 02_03_04_preprocess_training.ipynb
 │   └── 05_06_07_eval_gradcam_report.ipynb
-├── case_study/
-│   ├── Angad_CS3.docx
-│   ├── Angad_CS3.pdf
-│   ├── README.md
-│   ├── hook.md
-│   ├── student_rubric.md
-│   └── materials_and_references.md
 ├── .gitignore
 ├── LICENSE.md
 ├── README.md
