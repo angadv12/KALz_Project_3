@@ -1,13 +1,6 @@
-# KALz Project 3
+# CS3 by Angad Brar | Code and Results from KALz - Project 3 by Angad Brar, Kendall Freese, Lily Spyredes
 
-## 1. Software and Platform
-
-- **Python 3**
-- **Google Colab GPU runtime** for model training and evaluation
-- Local development was done on macOS and Windows
-- Python packages are listed in `requirements.txt`; the Colab notebooks also install missing packages when needed
-
-## 2. Repository Map
+## Repository Map
 
 ```text
 [Project Folder]/
@@ -43,6 +36,10 @@
 │   ├── 01_EDA.py
 │   ├── 02_03_04_preprocess_training.ipynb
 │   └── 05_06_07_eval_gradcam_report.ipynb
+├── case_study/
+│   ├── Angad_CS3_Hook.pdf
+│   ├── Angad_CS3_Rubric.pdf
+│   └── materials_and_references.md
 ├── .gitignore
 ├── LICENSE.md
 ├── README.md
@@ -52,157 +49,14 @@
 > [!NOTE]
 > The `data/` folder and model checkpoint files are large. They are not meant to be recreated manually file-by-file in Google Drive. Keep the dataset as a single zip in Google Drive, copy that one zip into Colab local storage, unzip locally, and save outputs back to Google Drive.
 
-## 3. Where to Put Google Drive Outputs Locally
+## CS3 Case Study Package
 
-After running the Colab notebooks, download or copy the generated Google Drive folder:
+The `case_study/` folder contains the CS3 package for turning this project into a case study:
 
-```text
-/content/drive/MyDrive/proj3/output
-```
+- `Angad_CS3_Hook.pdf`: hook document with background information.
+- `Angad_CS3_Rubric.pdf`: student-facing rubric source with info on materials / task.
 
-Place it at the root of this local repository as:
-
-```text
-output/
-```
-
-The final local paths should include:
-
-```text
-output/preprocess_config.json
-output/training_history_all.csv
-output/resnet50_training_history.csv
-output/densenet121_training_history.csv
-output/training_curves.png
-output/evaluation/metrics_summary.csv
-output/evaluation/final_results_summary.txt
-output/evaluation/resnet50_confusion_matrix.png
-output/evaluation/densenet121_confusion_matrix.png
-output/gradcam/resnet50_gradcam_examples.png
-output/gradcam/densenet121_gradcam_examples.png
-```
-
-The checkpoint files should be placed here if they are needed for rerunning evaluation:
-
-```text
-output/models/resnet50_best.pt
-output/models/densenet121_best.pt
-```
-
-If GitHub or the submission system rejects large files, keep the `.pt` checkpoint files in Google Drive and include the metrics/plots/reports in `output/` locally.
-
-## 4. How to Reproduce the Results
-
-### Local Setup for EDA
-
-Run these commands from the project root:
-
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python scripts/01_EDA.py
-```
-
-On Windows PowerShell, activate the environment with:
-
-```bash
-venv\\Scripts\\Activate.ps1
-```
-
-The local `data/` folder must contain this structure before running EDA:
-
-```text
-data/train/REAL
-data/train/FAKE
-data/test/REAL
-data/test/FAKE
-```
-
-### Colab Setup for Training and Evaluation
-
-1. Upload the project folder or notebooks to Google Drive under:
-
-```text
-MyDrive/proj3
-```
-
-2. Put the CIFAKE dataset zip at this Google Drive path:
-
-```text
-MyDrive/proj3/cifake.zip
-```
-
-3. Open Colab and choose a GPU runtime:
-
-```text
-Runtime > Change runtime type > GPU
-```
-
-Use an H100 or A100 if available. L4 and T4 also work.
-> [!NOTE]
-> If you are a student, you can claim Google Colab Pro with .edu email.
-
-### Run Steps 2-4: Preprocessing, Model Setup, and Training
-
-Open and run:
-
-```text
-scripts/02_03_04_preprocess_training.ipynb
-```
-
-This notebook:
-
-- mounts Google Drive
-- copies the single dataset zip from Drive to `/content/proj3_runtime`
-- unzips the dataset locally in Colab
-- creates train, validation, and test dataloaders
-- resizes images to `224x224`
-- normalizes images with ImageNet mean and standard deviation
-- trains ResNet-50 and DenseNet-121
-- saves model checkpoints and training outputs to Google Drive
-
-The main outputs are saved to:
-
-```text
-/content/drive/MyDrive/proj3/output/preprocess_config.json
-/content/drive/MyDrive/proj3/output/resnet50_training_history.csv
-/content/drive/MyDrive/proj3/output/densenet121_training_history.csv
-/content/drive/MyDrive/proj3/output/training_history_all.csv
-/content/drive/MyDrive/proj3/output/training_curves.png
-/content/drive/MyDrive/proj3/output/models/resnet50_best.pt
-/content/drive/MyDrive/proj3/output/models/densenet121_best.pt
-```
-
-### Run Steps 5-7: Evaluation, Grad-CAM, and Reporting
-
-After training finishes, open and run:
-
-```text
-scripts/05_06_07_eval_gradcam_report.ipynb
-```
-
-This notebook:
-
-- loads the saved model checkpoints from Google Drive
-- rebuilds the test dataloader
-- evaluates both models on the 20,000-image test set
-- saves classification reports and confusion matrices
-- generates Grad-CAM examples
-- writes a final summary text file
-
-The main outputs are saved to:
-
-```text
-/content/drive/MyDrive/proj3/output/evaluation/metrics_summary.csv
-/content/drive/MyDrive/proj3/output/evaluation/final_results_summary.txt
-/content/drive/MyDrive/proj3/output/evaluation/resnet50_confusion_matrix.png
-/content/drive/MyDrive/proj3/output/evaluation/densenet121_confusion_matrix.png
-/content/drive/MyDrive/proj3/output/gradcam/resnet50_gradcam_examples.png
-/content/drive/MyDrive/proj3/output/gradcam/densenet121_gradcam_examples.png
-```
-
-## 5. Final Model Results
+## Final Model Results
 
 Both models exceeded the project goal of 80% test accuracy and surpassed the 92.98% baseline reported by Bird and Lotfi.
 
@@ -213,7 +67,7 @@ Both models exceeded the project goal of 80% test accuracy and surpassed the 92.
 
 DenseNet-121 was the best model by test accuracy, but only by 0.05 percentage points, so both pretrained CNN architectures performed similarly well on CIFAKE.
 
-## 6. References
+## References
 
 [1] C. Vaccari and A. Chadwick, "Deepfakes and disinformation: Exploring the impact of synthetic political video on deception, uncertainty, and trust in news," Social Media + Society, vol. 6, no. pp. 1-13, 2020, doi: 10.1177/2056305120903408.
 
